@@ -1,9 +1,15 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "myviewer.h"
+
 #include <QMainWindow>
 
-#include "myviewer.h"
+#include <QMenuBar>
+#include <QMenu>
+#include <QAction>
+#include <QToolBar>
+#include <QStatusBar>
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -13,7 +19,10 @@ public:
     ~MainWindow();
 
     MyViewer* _viewer;
-//    QString _window_title = QString("[WindowTitle]");
+	QMenuBar* _menubar;
+	QToolBar* _toolbar;
+	QStatusBar* _statusbar;
+	QLabel* _label;
 
 private slots:
 
